@@ -3,11 +3,11 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', ['title' => 'Home Page']);
 });
 
 Route::get('/about', function () {
-    return view('about', ['nama' => 'Damar']);
+    return view('about', ['title' => 'About Page', 'nama' => 'Damar']);
 });
 
 Route::get('/blog', function () {
@@ -22,9 +22,9 @@ Route::get('/blog', function () {
         ],
     ];
 
-    return view('blog', ['posts' => $blog_posts]);
+    return view('blog', ['title' => 'Blog Page', 'posts' => $blog_posts]);
 });
 
 Route::get('/contact', function () {
-    return view('contact', ['email' => 'damarsepti627@gmail.com']);
+    return view('contact', ['title' => 'Contact Page', 'email' => 'damarsepti627@gmail.com']);
 });

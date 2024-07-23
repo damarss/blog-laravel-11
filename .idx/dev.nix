@@ -16,7 +16,17 @@
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
-      # "vscodevim.vim"
+      "bmewburn.vscode-intelephense-client"
+      "MehediDracula.php-namespace-resolver"
+      "onecentlin.laravel5-snippets"
+      "porifa.laravel-intelephense"
+      "amiralizadeh9480.laravel-extra-intellisense"
+      "codingyu.laravel-goto-view"
+      "shufo.vscode-blade-formatter"
+      "onecentlin.laravel-blade"
+      "bradlc.vscode-tailwindcss"
+      "esbenp.prettier-vscode"
+      "PKief.material-icon-theme"
     ];
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
