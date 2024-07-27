@@ -10,6 +10,7 @@
     pkgs.nodejs_20
     pkgs.neofetch
     pkgs.openssh
+    pkgs.sqlite
   ];
   # Sets environment variables in the workspace
   env = {};
@@ -27,6 +28,7 @@
       "bradlc.vscode-tailwindcss"
       "esbenp.prettier-vscode"
       "PKief.material-icon-theme"
+      "cweijan.vscode-database-client2"
     ];
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
