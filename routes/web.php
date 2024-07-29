@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
@@ -13,12 +14,9 @@ Route::get('/about', function () {
     return view('about', ['title' => 'About Page', 'nama' => 'Damar']);
 });
 
-Route::get('/posts', function () {
-    return view('posts', ['title' => 'Blog Page', 'posts' => Post::filter(request(['search', 'category', 'author']))->latest()->paginate(12)->withQueryString()]);
-});
-
-Route::get('/posts/{post:slug}', function (Post $post) {
-    return view('post', ['title' => 'Single Post', 'post' => $post]);
+Route::controller(PostController::class)->group(function () {
+    Route::get('/posts', 'index');
+    Route::get('/posts/{post:slug}', 'show');
 });
 
 Route::get('/contact', function () {
